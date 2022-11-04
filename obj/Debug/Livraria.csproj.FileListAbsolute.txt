@@ -1,0 +1,10 @@
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\Livraria.exe.config
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\Livraria.exe
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\Livraria.pdb
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.csproj.AssemblyReference.cache
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.Properties.Resources.resources
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.csproj.GenerateResource.cache
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.csproj.CoreCompileInputs.cache
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.exe
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.pdb
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.Livraria.resources
