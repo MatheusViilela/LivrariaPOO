@@ -8,3 +8,14 @@ D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.csproj.CoreCompileInputs.cache
 D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.exe
 D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.pdb
 D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.Livraria.resources
+D:\LivrariaPOO\bin\Debug\Livraria.exe.config
+D:\LivrariaPOO\bin\Debug\Livraria.exe
+D:\LivrariaPOO\bin\Debug\Livraria.pdb
+D:\LivrariaPOO\obj\Debug\Livraria.csprojAssemblyReference.cache
+D:\LivrariaPOO\obj\Debug\Livraria.Livraria.resources
+D:\LivrariaPOO\obj\Debug\Livraria.Properties.Resources.resources
+D:\LivrariaPOO\obj\Debug\Livraria.csproj.GenerateResource.cache
+D:\LivrariaPOO\obj\Debug\Livraria.csproj.CoreCompileInputs.cache
+D:\LivrariaPOO\obj\Debug\Livraria.exe
+D:\LivrariaPOO\obj\Debug\Livraria.pdb
+D:\LivrariaPOO\obj\Debug\Livraria.Telas.resources

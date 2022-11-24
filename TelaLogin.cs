@@ -15,6 +15,17 @@ namespace Livraria
         public Livraria()
         {
             InitializeComponent();
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.BackColor = Color.Transparent;
+
+            btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btLogin.FlatAppearance.BorderSize = 0;
+            btLogin.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btLogin.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btLogin.BackColor = Color.Transparent;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,16 +45,18 @@ namespace Livraria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void btLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtUser.Text.Equals("vitorgaefke@gmail.com") && txtPswd.Text.Equals("12345"))
+                if (txtUser.Text.Equals("vitor") && txtPswd.Text.Equals("12345"))
                 {
-                    //logar
+                    this.Controls.Clear();
+                    Telas tl = new Telas();
+
                 } else
                 {
                     MessageBox.Show("Usuário ou senha incorretos",
