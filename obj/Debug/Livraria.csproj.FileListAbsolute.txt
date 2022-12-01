@@ -19,3 +19,14 @@ D:\LivrariaPOO\obj\Debug\Livraria.csproj.CoreCompileInputs.cache
 D:\LivrariaPOO\obj\Debug\Livraria.exe
 D:\LivrariaPOO\obj\Debug\Livraria.pdb
 D:\LivrariaPOO\obj\Debug\Livraria.Telas.resources
+C:\Users\aluno\carol\bin\Debug\Livraria.exe.config
+C:\Users\aluno\carol\bin\Debug\Livraria.exe
+C:\Users\aluno\carol\bin\Debug\Livraria.pdb
+C:\Users\aluno\carol\obj\Debug\Livraria.csprojAssemblyReference.cache
+C:\Users\aluno\carol\obj\Debug\Livraria.Telas.resources
+C:\Users\aluno\carol\obj\Debug\Livraria.Livraria.resources
+C:\Users\aluno\carol\obj\Debug\Livraria.Properties.Resources.resources
+C:\Users\aluno\carol\obj\Debug\Livraria.csproj.GenerateResource.cache
+C:\Users\aluno\carol\obj\Debug\Livraria.csproj.CoreCompileInputs.cache
+C:\Users\aluno\carol\obj\Debug\Livraria.exe
+C:\Users\aluno\carol\obj\Debug\Livraria.pdb

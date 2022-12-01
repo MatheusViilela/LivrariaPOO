@@ -52,11 +52,11 @@
             this.txtPswd.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPswd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
             this.txtPswd.Location = new System.Drawing.Point(545, 400);
-            this.txtPswd.Multiline = true;
             this.txtPswd.Name = "txtPswd";
-            this.txtPswd.Size = new System.Drawing.Size(195, 29);
+            this.txtPswd.Size = new System.Drawing.Size(195, 31);
             this.txtPswd.TabIndex = 2;
             this.txtPswd.Text = "Senha";
+            this.txtPswd.UseSystemPasswordChar = true;
             this.txtPswd.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtUser

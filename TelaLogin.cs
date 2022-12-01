@@ -56,6 +56,7 @@ namespace Livraria
                 {
                     this.Controls.Clear();
                     Telas tl = new Telas();
+                    tl.Show();
 
                 } else
                 {
@@ -74,7 +75,7 @@ namespace Livraria
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
