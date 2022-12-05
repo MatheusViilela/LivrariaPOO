@@ -32,51 +32,51 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.HOME = new System.Windows.Forms.TabPage();
             this.ESTOQUE = new System.Windows.Forms.TabPage();
+            this.filtroLivro = new System.Windows.Forms.ComboBox();
+            this.autorLivro = new System.Windows.Forms.TextBox();
+            this.editoraLivro = new System.Windows.Forms.TextBox();
+            this.dataLivro = new System.Windows.Forms.TextBox();
+            this.tituloLivro = new System.Windows.Forms.TextBox();
+            this.generoLivro = new System.Windows.Forms.TextBox();
             this.tipoLivro = new System.Windows.Forms.TextBox();
             this.btPesEst = new System.Windows.Forms.Button();
             this.btExcEst = new System.Windows.Forms.Button();
             this.btEdiEst = new System.Windows.Forms.Button();
             this.btIsnEst = new System.Windows.Forms.Button();
             this.FUNCIONÁRIES = new System.Windows.Forms.TabPage();
+            this.senhaFunc = new System.Windows.Forms.TextBox();
+            this.cpfFunc = new System.Windows.Forms.TextBox();
+            this.senhaFuncConf = new System.Windows.Forms.TextBox();
+            this.emailFunc = new System.Windows.Forms.TextBox();
+            this.nomeFunc = new System.Windows.Forms.TextBox();
             this.btExcFun = new System.Windows.Forms.Button();
             this.btEdiFun = new System.Windows.Forms.Button();
             this.btInsFun = new System.Windows.Forms.Button();
             this.btPesFun = new System.Windows.Forms.Button();
             this.CLIENTES = new System.Windows.Forms.TabPage();
+            this.telefoneCli = new System.Windows.Forms.TextBox();
+            this.cpfCli = new System.Windows.Forms.TextBox();
+            this.emailCli = new System.Windows.Forms.TextBox();
+            this.nomeCli = new System.Windows.Forms.TextBox();
             this.btExcCli = new System.Windows.Forms.Button();
             this.btEdiCli = new System.Windows.Forms.Button();
             this.btInsCli = new System.Windows.Forms.Button();
             this.btPesCli = new System.Windows.Forms.Button();
             this.VENDAS = new System.Windows.Forms.TabPage();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btExcVen = new System.Windows.Forms.Button();
             this.btEdiVen = new System.Windows.Forms.Button();
             this.btInsVen = new System.Windows.Forms.Button();
             this.btFinVen = new System.Windows.Forms.Button();
             this.btCanVen = new System.Windows.Forms.Button();
             this.FUNCIONÁRIOS = new System.Windows.Forms.TabPage();
-            this.generoLivro = new System.Windows.Forms.TextBox();
-            this.tituloLivro = new System.Windows.Forms.TextBox();
-            this.dataLivro = new System.Windows.Forms.TextBox();
-            this.editoraLivro = new System.Windows.Forms.TextBox();
-            this.autorLivro = new System.Windows.Forms.TextBox();
-            this.filtroLivro = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.nomeFunc = new System.Windows.Forms.TextBox();
-            this.emailFunc = new System.Windows.Forms.TextBox();
-            this.senhaFuncConf = new System.Windows.Forms.TextBox();
-            this.cpfFunc = new System.Windows.Forms.TextBox();
-            this.senhaFunc = new System.Windows.Forms.TextBox();
-            this.nomeCli = new System.Windows.Forms.TextBox();
-            this.elailCli = new System.Windows.Forms.TextBox();
-            this.cpfCli = new System.Windows.Forms.TextBox();
-            this.telefoneCli = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.ESTOQUE.SuspendLayout();
             this.FUNCIONÁRIES.SuspendLayout();
@@ -129,6 +129,59 @@
             this.ESTOQUE.TabIndex = 1;
             this.ESTOQUE.Text = "ESTOQUE";
             this.ESTOQUE.UseVisualStyleBackColor = true;
+            // 
+            // filtroLivro
+            // 
+            this.filtroLivro.FormattingEnabled = true;
+            this.filtroLivro.Location = new System.Drawing.Point(106, 239);
+            this.filtroLivro.Name = "filtroLivro";
+            this.filtroLivro.Size = new System.Drawing.Size(257, 21);
+            this.filtroLivro.TabIndex = 10;
+            // 
+            // autorLivro
+            // 
+            this.autorLivro.Location = new System.Drawing.Point(106, 158);
+            this.autorLivro.Multiline = true;
+            this.autorLivro.Name = "autorLivro";
+            this.autorLivro.Size = new System.Drawing.Size(310, 27);
+            this.autorLivro.TabIndex = 9;
+            this.autorLivro.Text = "Autor...";
+            // 
+            // editoraLivro
+            // 
+            this.editoraLivro.Location = new System.Drawing.Point(755, 158);
+            this.editoraLivro.Multiline = true;
+            this.editoraLivro.Name = "editoraLivro";
+            this.editoraLivro.Size = new System.Drawing.Size(246, 27);
+            this.editoraLivro.TabIndex = 8;
+            this.editoraLivro.Text = "Editora...";
+            // 
+            // dataLivro
+            // 
+            this.dataLivro.Location = new System.Drawing.Point(457, 158);
+            this.dataLivro.Multiline = true;
+            this.dataLivro.Name = "dataLivro";
+            this.dataLivro.Size = new System.Drawing.Size(262, 27);
+            this.dataLivro.TabIndex = 7;
+            this.dataLivro.Text = "Data...";
+            // 
+            // tituloLivro
+            // 
+            this.tituloLivro.Location = new System.Drawing.Point(669, 79);
+            this.tituloLivro.Multiline = true;
+            this.tituloLivro.Name = "tituloLivro";
+            this.tituloLivro.Size = new System.Drawing.Size(341, 25);
+            this.tituloLivro.TabIndex = 6;
+            this.tituloLivro.Text = "Título...";
+            // 
+            // generoLivro
+            // 
+            this.generoLivro.Location = new System.Drawing.Point(339, 79);
+            this.generoLivro.Multiline = true;
+            this.generoLivro.Name = "generoLivro";
+            this.generoLivro.Size = new System.Drawing.Size(286, 25);
+            this.generoLivro.TabIndex = 5;
+            this.generoLivro.Text = "Gênero...";
             // 
             // tipoLivro
             // 
@@ -194,6 +247,49 @@
             this.FUNCIONÁRIES.Text = "FUNCIONÁRIOS";
             this.FUNCIONÁRIES.UseVisualStyleBackColor = true;
             // 
+            // senhaFunc
+            // 
+            this.senhaFunc.Location = new System.Drawing.Point(563, 161);
+            this.senhaFunc.Name = "senhaFunc";
+            this.senhaFunc.Size = new System.Drawing.Size(183, 20);
+            this.senhaFunc.TabIndex = 8;
+            this.senhaFunc.UseSystemPasswordChar = true;
+            // 
+            // cpfFunc
+            // 
+            this.cpfFunc.Location = new System.Drawing.Point(746, 78);
+            this.cpfFunc.Multiline = true;
+            this.cpfFunc.Name = "cpfFunc";
+            this.cpfFunc.Size = new System.Drawing.Size(238, 31);
+            this.cpfFunc.TabIndex = 7;
+            this.cpfFunc.Text = "CPF...";
+            // 
+            // senhaFuncConf
+            // 
+            this.senhaFuncConf.Location = new System.Drawing.Point(780, 161);
+            this.senhaFuncConf.Name = "senhaFuncConf";
+            this.senhaFuncConf.Size = new System.Drawing.Size(204, 20);
+            this.senhaFuncConf.TabIndex = 6;
+            this.senhaFuncConf.UseSystemPasswordChar = true;
+            // 
+            // emailFunc
+            // 
+            this.emailFunc.Location = new System.Drawing.Point(126, 157);
+            this.emailFunc.Multiline = true;
+            this.emailFunc.Name = "emailFunc";
+            this.emailFunc.Size = new System.Drawing.Size(399, 28);
+            this.emailFunc.TabIndex = 5;
+            this.emailFunc.Text = "Email...";
+            // 
+            // nomeFunc
+            // 
+            this.nomeFunc.Location = new System.Drawing.Point(126, 78);
+            this.nomeFunc.Multiline = true;
+            this.nomeFunc.Name = "nomeFunc";
+            this.nomeFunc.Size = new System.Drawing.Size(581, 31);
+            this.nomeFunc.TabIndex = 4;
+            this.nomeFunc.Text = "Nome...";
+            // 
             // btExcFun
             // 
             this.btExcFun.Location = new System.Drawing.Point(766, 579);
@@ -231,7 +327,7 @@
             this.CLIENTES.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CLIENTES.BackgroundImage")));
             this.CLIENTES.Controls.Add(this.telefoneCli);
             this.CLIENTES.Controls.Add(this.cpfCli);
-            this.CLIENTES.Controls.Add(this.elailCli);
+            this.CLIENTES.Controls.Add(this.emailCli);
             this.CLIENTES.Controls.Add(this.nomeCli);
             this.CLIENTES.Controls.Add(this.btExcCli);
             this.CLIENTES.Controls.Add(this.btEdiCli);
@@ -243,6 +339,42 @@
             this.CLIENTES.TabIndex = 3;
             this.CLIENTES.Text = "CLIENTES";
             this.CLIENTES.UseVisualStyleBackColor = true;
+            // 
+            // telefoneCli
+            // 
+            this.telefoneCli.Location = new System.Drawing.Point(732, 159);
+            this.telefoneCli.Multiline = true;
+            this.telefoneCli.Name = "telefoneCli";
+            this.telefoneCli.Size = new System.Drawing.Size(100, 20);
+            this.telefoneCli.TabIndex = 7;
+            this.telefoneCli.Text = "Telefone...";
+            // 
+            // cpfCli
+            // 
+            this.cpfCli.Location = new System.Drawing.Point(732, 79);
+            this.cpfCli.Multiline = true;
+            this.cpfCli.Name = "cpfCli";
+            this.cpfCli.Size = new System.Drawing.Size(100, 20);
+            this.cpfCli.TabIndex = 6;
+            this.cpfCli.Text = "CPF...";
+            // 
+            // emailCli
+            // 
+            this.emailCli.Location = new System.Drawing.Point(126, 159);
+            this.emailCli.Multiline = true;
+            this.emailCli.Name = "emailCli";
+            this.emailCli.Size = new System.Drawing.Size(217, 20);
+            this.emailCli.TabIndex = 5;
+            this.emailCli.Text = "Email...";
+            // 
+            // nomeCli
+            // 
+            this.nomeCli.Location = new System.Drawing.Point(126, 79);
+            this.nomeCli.Multiline = true;
+            this.nomeCli.Name = "nomeCli";
+            this.nomeCli.Size = new System.Drawing.Size(273, 31);
+            this.nomeCli.TabIndex = 4;
+            this.nomeCli.Text = "Nome...";
             // 
             // btExcCli
             // 
@@ -267,6 +399,7 @@
             this.btInsCli.Size = new System.Drawing.Size(164, 40);
             this.btInsCli.TabIndex = 1;
             this.btInsCli.UseVisualStyleBackColor = true;
+            this.btInsCli.Click += new System.EventHandler(this.btInsCli_Click);
             // 
             // btPesCli
             // 
@@ -297,6 +430,57 @@
             this.VENDAS.TabIndex = 4;
             this.VENDAS.Text = "VENDAS";
             this.VENDAS.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(820, 280);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 11;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(644, 280);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 10;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(334, 280);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 9;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(161, 280);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(0, 0);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(413, 109);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(138, 109);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
             // 
             // btExcVen
             // 
@@ -346,189 +530,6 @@
             this.FUNCIONÁRIOS.TabIndex = 2;
             this.FUNCIONÁRIOS.Text = "tabPage2";
             this.FUNCIONÁRIOS.UseVisualStyleBackColor = true;
-            // 
-            // generoLivro
-            // 
-            this.generoLivro.Location = new System.Drawing.Point(339, 79);
-            this.generoLivro.Multiline = true;
-            this.generoLivro.Name = "generoLivro";
-            this.generoLivro.Size = new System.Drawing.Size(286, 25);
-            this.generoLivro.TabIndex = 5;
-            this.generoLivro.Text = "Gênero...";
-            // 
-            // tituloLivro
-            // 
-            this.tituloLivro.Location = new System.Drawing.Point(669, 79);
-            this.tituloLivro.Multiline = true;
-            this.tituloLivro.Name = "tituloLivro";
-            this.tituloLivro.Size = new System.Drawing.Size(341, 25);
-            this.tituloLivro.TabIndex = 6;
-            this.tituloLivro.Text = "Título...";
-            // 
-            // dataLivro
-            // 
-            this.dataLivro.Location = new System.Drawing.Point(457, 158);
-            this.dataLivro.Multiline = true;
-            this.dataLivro.Name = "dataLivro";
-            this.dataLivro.Size = new System.Drawing.Size(262, 27);
-            this.dataLivro.TabIndex = 7;
-            this.dataLivro.Text = "Data...";
-            // 
-            // editoraLivro
-            // 
-            this.editoraLivro.Location = new System.Drawing.Point(755, 158);
-            this.editoraLivro.Multiline = true;
-            this.editoraLivro.Name = "editoraLivro";
-            this.editoraLivro.Size = new System.Drawing.Size(246, 27);
-            this.editoraLivro.TabIndex = 8;
-            this.editoraLivro.Text = "Editora...";
-            // 
-            // autorLivro
-            // 
-            this.autorLivro.Location = new System.Drawing.Point(106, 158);
-            this.autorLivro.Multiline = true;
-            this.autorLivro.Name = "autorLivro";
-            this.autorLivro.Size = new System.Drawing.Size(310, 27);
-            this.autorLivro.TabIndex = 9;
-            this.autorLivro.Text = "Autor...";
-            // 
-            // filtroLivro
-            // 
-            this.filtroLivro.FormattingEnabled = true;
-            this.filtroLivro.Location = new System.Drawing.Point(106, 239);
-            this.filtroLivro.Name = "filtroLivro";
-            this.filtroLivro.Size = new System.Drawing.Size(257, 21);
-            this.filtroLivro.TabIndex = 10;
-            // 
-            // nomeFunc
-            // 
-            this.nomeFunc.Location = new System.Drawing.Point(126, 78);
-            this.nomeFunc.Multiline = true;
-            this.nomeFunc.Name = "nomeFunc";
-            this.nomeFunc.Size = new System.Drawing.Size(581, 31);
-            this.nomeFunc.TabIndex = 4;
-            this.nomeFunc.Text = "Nome...";
-            // 
-            // emailFunc
-            // 
-            this.emailFunc.Location = new System.Drawing.Point(126, 157);
-            this.emailFunc.Multiline = true;
-            this.emailFunc.Name = "emailFunc";
-            this.emailFunc.Size = new System.Drawing.Size(399, 28);
-            this.emailFunc.TabIndex = 5;
-            this.emailFunc.Text = "Email...";
-            // 
-            // senhaFuncConf
-            // 
-            this.senhaFuncConf.Location = new System.Drawing.Point(780, 161);
-            this.senhaFuncConf.Name = "senhaFuncConf";
-            this.senhaFuncConf.Size = new System.Drawing.Size(204, 20);
-            this.senhaFuncConf.TabIndex = 6;
-            this.senhaFuncConf.UseSystemPasswordChar = true;
-            // 
-            // cpfFunc
-            // 
-            this.cpfFunc.Location = new System.Drawing.Point(746, 78);
-            this.cpfFunc.Multiline = true;
-            this.cpfFunc.Name = "cpfFunc";
-            this.cpfFunc.Size = new System.Drawing.Size(238, 31);
-            this.cpfFunc.TabIndex = 7;
-            this.cpfFunc.Text = "CPF...";
-            // 
-            // senhaFunc
-            // 
-            this.senhaFunc.Location = new System.Drawing.Point(563, 161);
-            this.senhaFunc.Name = "senhaFunc";
-            this.senhaFunc.Size = new System.Drawing.Size(183, 20);
-            this.senhaFunc.TabIndex = 8;
-            this.senhaFunc.UseSystemPasswordChar = true;
-            // 
-            // nomeCli
-            // 
-            this.nomeCli.Location = new System.Drawing.Point(126, 79);
-            this.nomeCli.Multiline = true;
-            this.nomeCli.Name = "nomeCli";
-            this.nomeCli.Size = new System.Drawing.Size(273, 31);
-            this.nomeCli.TabIndex = 4;
-            this.nomeCli.Text = "Nome...";
-            // 
-            // elailCli
-            // 
-            this.elailCli.Location = new System.Drawing.Point(126, 159);
-            this.elailCli.Multiline = true;
-            this.elailCli.Name = "elailCli";
-            this.elailCli.Size = new System.Drawing.Size(217, 20);
-            this.elailCli.TabIndex = 5;
-            this.elailCli.Text = "Email...";
-            // 
-            // cpfCli
-            // 
-            this.cpfCli.Location = new System.Drawing.Point(732, 79);
-            this.cpfCli.Multiline = true;
-            this.cpfCli.Name = "cpfCli";
-            this.cpfCli.Size = new System.Drawing.Size(100, 20);
-            this.cpfCli.TabIndex = 6;
-            this.cpfCli.Text = "CPF...";
-            // 
-            // telefoneCli
-            // 
-            this.telefoneCli.Location = new System.Drawing.Point(732, 159);
-            this.telefoneCli.Multiline = true;
-            this.telefoneCli.Name = "telefoneCli";
-            this.telefoneCli.Size = new System.Drawing.Size(100, 20);
-            this.telefoneCli.TabIndex = 7;
-            this.telefoneCli.Text = "Telefone...";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(138, 109);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(413, 109);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(0, 0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(161, 280);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(334, 280);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(644, 280);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 10;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(820, 280);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 11;
             // 
             // Telas
             // 
@@ -592,7 +593,7 @@
         private System.Windows.Forms.TextBox nomeFunc;
         private System.Windows.Forms.TextBox telefoneCli;
         private System.Windows.Forms.TextBox cpfCli;
-        private System.Windows.Forms.TextBox elailCli;
+        private System.Windows.Forms.TextBox emailCli;
         private System.Windows.Forms.TextBox nomeCli;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
