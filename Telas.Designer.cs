@@ -313,6 +313,7 @@
             this.btInsFun.Size = new System.Drawing.Size(164, 40);
             this.btInsFun.TabIndex = 1;
             this.btInsFun.UseVisualStyleBackColor = true;
+            this.btInsFun.Click += new System.EventHandler(this.btInsFun_Click);
             // 
             // btPesFun
             // 
