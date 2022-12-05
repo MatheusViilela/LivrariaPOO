@@ -65,3 +65,27 @@ C:\Projetos (Miguel)\Projeto Livraria\LivrariaPOO\obj\Debug\Livraria.csproj.Core
 C:\Projetos (Miguel)\Projeto Livraria\LivrariaPOO\obj\Debug\Livraria.csproj.CopyComplete
 C:\Projetos (Miguel)\Projeto Livraria\LivrariaPOO\obj\Debug\Livraria.exe
 C:\Projetos (Miguel)\Projeto Livraria\LivrariaPOO\obj\Debug\Livraria.pdb
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\BouncyCastle.Crypto.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\Google.Protobuf.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\K4os.Compression.LZ4.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\K4os.Hash.xxHash.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\MySql.Data.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Buffers.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Memory.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Numerics.Vectors.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\ZstdNet.dll
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\BouncyCastle.Crypto.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\Google.Protobuf.pdb
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\Google.Protobuf.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\K4os.Compression.LZ4.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\K4os.Hash.xxHash.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\MySql.Data.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Buffers.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Memory.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Numerics.Vectors.xml
+D:\ProjetoPOO\LivrariaPOO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.Telas.resources
+D:\ProjetoPOO\LivrariaPOO\obj\Debug\Livraria.csproj.CopyComplete
