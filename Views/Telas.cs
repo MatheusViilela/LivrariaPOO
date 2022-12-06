@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using MySql.Data.MySqlClient;
+using Livraria.Models;
+using Livraria.Controllers;
 
 namespace Livraria
 {
@@ -39,29 +40,16 @@ namespace Livraria
         {
             try
             {
-                string data_source = "datasource=localhost;username=root;password=;database=livraria";
-                //criar conexão com mysql
-                Conexao = new MySqlConnection(data_source);
+                Usuario cliente = new Usuario(nomeCli.Text, cpfCli.Text, telefoneCli.Text, emailCli.Text);
 
-                string sql = "INSERT INTO clientes (nome,cpf,telefone,email)" +
-                    "VALUES ('" +nomeCli.Text+ "','" +cpfCli.Text+ "','" +telefoneCli.Text + "', '"+emailCli.Text+"')";
+                Cliente clienteC = new Cliente();
 
-                MySqlCommand comando = new MySqlCommand(sql, Conexao);
-            
-                // Executar Comando Insert
-                Conexao.Open();
-
-                comando.ExecuteReader();
-
+                clienteC.Cadastrar(cliente);
                 MessageBox.Show("Cadastrado Com Sucesso");
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                Conexao.Close();
             }
         }
 
