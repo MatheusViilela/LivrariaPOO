@@ -204,7 +204,7 @@
             // 
             // btExcEst
             // 
-            this.btExcEst.Location = new System.Drawing.Point(764, 583);
+            this.btExcEst.Location = new System.Drawing.Point(765, 583);
             this.btExcEst.Name = "btExcEst";
             this.btExcEst.Size = new System.Drawing.Size(164, 41);
             this.btExcEst.TabIndex = 2;
