@@ -254,6 +254,7 @@
             this.senhaFunc.Size = new System.Drawing.Size(183, 20);
             this.senhaFunc.TabIndex = 8;
             this.senhaFunc.UseSystemPasswordChar = true;
+            this.senhaFunc.TextChanged += new System.EventHandler(this.senhaFunc_TextChanged);
             // 
             // cpfFunc
             // 
