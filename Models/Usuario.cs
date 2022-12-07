@@ -17,12 +17,21 @@ namespace Livraria.Models
 
         public Usuario() { }
 
-        public Usuario(string nome, string cpf, string telefone, string email)
+        public Usuario(string nome, string cpf, string telefone, string email, string senha)
         {
             this.Nome = nome;
             this.CPF = cpf;
             this.Telefone = telefone;
             this.Email = email;
+            this.Senha = senha;
         }
+        public Usuario(string nome, string cpf, string email, string senha)
+        {
+            this.Nome = nome;
+            this.CPF = cpf;
+            this.Email = email;
+            this.Senha = senha;
+        }
+
     }
 }

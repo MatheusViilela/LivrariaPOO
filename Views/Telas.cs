@@ -40,7 +40,7 @@ namespace Livraria
         {
             try
             {
-                Usuario cliente = new Usuario(nomeCli.Text, cpfCli.Text, telefoneCli.Text, emailCli.Text);
+                Usuario cliente = new Usuario(nomeCli.Text, cpfCli.Text, telefoneCli.Text, emailCli.Text, "");
 
                 Cliente clienteC = new Cliente();
 
