@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace Livraria.Models
 {
@@ -32,6 +33,5 @@ namespace Livraria.Models
             this.Email = email;
             this.Senha = senha;
         }
-
     }
 }

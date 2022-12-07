@@ -87,7 +87,7 @@
     <Compile Include="Controllers\Cliente.cs" />
     <Compile Include="Controllers\Funcionario.cs" />
     <Compile Include="Controllers\Livro.cs" />
-    <Compile Include="Models\Livro.cs" />
+    <Compile Include="Models\LivroM.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Views\TelaLogin.cs">
       <SubType>Form</SubType>
