@@ -57,30 +57,22 @@ namespace Livraria
         {
             try
             {
-                string data_source = "datasource=localhost;username=root;password=;database=livraria";
-                //criar conexão com mysql
-                Conexao = new MySqlConnection(data_source);
+                Usuario funcionario = new Usuario(nomeFunc.Text, cpfFunc.Text, emailFunc.Text, senhaFunc.Text);
 
-                string sql = "INSERT INTO funcionarios (nome,cpf,email)" +
-                    "VALUES ('" + nomeFunc.Text + "','" + cpfFunc.Text + "','" + emailFunc.Text + "')";
+                Funcionario funcionario1= new Funcionario();
 
-                MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
-                // Executar Comando Insert
-                Conexao.Open();
-
-                comando.ExecuteReader();
-
+                funcionario1.Cadastrar(funcionario);
                 MessageBox.Show("Cadastrado Com Sucesso");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                Conexao.Close();
-            }
+        }
+
+        private void senhaFunc_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
