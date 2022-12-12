@@ -32,6 +32,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.HOME = new System.Windows.Forms.TabPage();
             this.ESTOQUE = new System.Windows.Forms.TabPage();
+            this.dtGridEst = new System.Windows.Forms.DataGridView();
+            this.campoFiltroEst = new System.Windows.Forms.TextBox();
+            this.valorLivro = new System.Windows.Forms.MaskedTextBox();
+            this.btConEst = new System.Windows.Forms.Button();
             this.filtroLivro = new System.Windows.Forms.ComboBox();
             this.autorLivro = new System.Windows.Forms.TextBox();
             this.editoraLivro = new System.Windows.Forms.TextBox();
@@ -44,6 +48,10 @@
             this.btEdiEst = new System.Windows.Forms.Button();
             this.btIsnEst = new System.Windows.Forms.Button();
             this.FUNCIONÁRIES = new System.Windows.Forms.TabPage();
+            this.dtGridFun = new System.Windows.Forms.DataGridView();
+            this.campoFiltroFun = new System.Windows.Forms.TextBox();
+            this.filtroFun = new System.Windows.Forms.ComboBox();
+            this.btConFun = new System.Windows.Forms.Button();
             this.senhaFunc = new System.Windows.Forms.TextBox();
             this.cpfFunc = new System.Windows.Forms.TextBox();
             this.senhaFuncConf = new System.Windows.Forms.TextBox();
@@ -54,6 +62,10 @@
             this.btInsFun = new System.Windows.Forms.Button();
             this.btPesFun = new System.Windows.Forms.Button();
             this.CLIENTES = new System.Windows.Forms.TabPage();
+            this.dtGridCli = new System.Windows.Forms.DataGridView();
+            this.filtroCli = new System.Windows.Forms.ComboBox();
+            this.campoFiltroCli = new System.Windows.Forms.TextBox();
+            this.btConCli = new System.Windows.Forms.Button();
             this.telefoneCli = new System.Windows.Forms.TextBox();
             this.cpfCli = new System.Windows.Forms.TextBox();
             this.emailCli = new System.Windows.Forms.TextBox();
@@ -63,13 +75,15 @@
             this.btInsCli = new System.Windows.Forms.Button();
             this.btPesCli = new System.Windows.Forms.Button();
             this.VENDAS = new System.Windows.Forms.TabPage();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtGridNovaVenda = new System.Windows.Forms.DataGridView();
+            this.dataVen = new System.Windows.Forms.MaskedTextBox();
+            this.valUniVen = new System.Windows.Forms.TextBox();
+            this.qntProVen = new System.Windows.Forms.TextBox();
+            this.descProVen = new System.Windows.Forms.TextBox();
+            this.codProVen = new System.Windows.Forms.TextBox();
+            this.valTotVen = new System.Windows.Forms.TextBox();
+            this.nomeVen = new System.Windows.Forms.TextBox();
+            this.cliVen = new System.Windows.Forms.TextBox();
             this.btExcVen = new System.Windows.Forms.Button();
             this.btEdiVen = new System.Windows.Forms.Button();
             this.btInsVen = new System.Windows.Forms.Button();
@@ -79,9 +93,13 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.ESTOQUE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridEst)).BeginInit();
             this.FUNCIONÁRIES.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridFun)).BeginInit();
             this.CLIENTES.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCli)).BeginInit();
             this.VENDAS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridNovaVenda)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,25 +110,32 @@
             this.tabControl1.Controls.Add(this.CLIENTES);
             this.tabControl1.Controls.Add(this.VENDAS);
             this.tabControl1.ItemSize = new System.Drawing.Size(143, 58);
-            this.tabControl1.Location = new System.Drawing.Point(3, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1118, 726);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // HOME
             // 
+            this.HOME.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HOME.BackgroundImage")));
             this.HOME.Location = new System.Drawing.Point(4, 62);
             this.HOME.Name = "HOME";
             this.HOME.Padding = new System.Windows.Forms.Padding(3);
             this.HOME.Size = new System.Drawing.Size(1110, 660);
             this.HOME.TabIndex = 0;
+            this.HOME.Text = "HOME";
             this.HOME.UseVisualStyleBackColor = true;
             this.HOME.Click += new System.EventHandler(this.HOME_Click);
             // 
             // ESTOQUE
             // 
             this.ESTOQUE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ESTOQUE.BackgroundImage")));
+            this.ESTOQUE.Controls.Add(this.dtGridEst);
+            this.ESTOQUE.Controls.Add(this.campoFiltroEst);
+            this.ESTOQUE.Controls.Add(this.valorLivro);
+            this.ESTOQUE.Controls.Add(this.btConEst);
             this.ESTOQUE.Controls.Add(this.filtroLivro);
             this.ESTOQUE.Controls.Add(this.autorLivro);
             this.ESTOQUE.Controls.Add(this.editoraLivro);
@@ -130,69 +155,134 @@
             this.ESTOQUE.Text = "ESTOQUE";
             this.ESTOQUE.UseVisualStyleBackColor = true;
             // 
+            // dtGridEst
+            // 
+            this.dtGridEst.AllowUserToAddRows = false;
+            this.dtGridEst.AllowUserToDeleteRows = false;
+            this.dtGridEst.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridEst.Location = new System.Drawing.Point(106, 289);
+            this.dtGridEst.Name = "dtGridEst";
+            this.dtGridEst.Size = new System.Drawing.Size(904, 236);
+            this.dtGridEst.TabIndex = 15;
+            this.dtGridEst.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtGridEst_CellMouseDoubleClick);
+            // 
+            // campoFiltroEst
+            // 
+            this.campoFiltroEst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoFiltroEst.Location = new System.Drawing.Point(546, 243);
+            this.campoFiltroEst.Multiline = true;
+            this.campoFiltroEst.Name = "campoFiltroEst";
+            this.campoFiltroEst.Size = new System.Drawing.Size(291, 24);
+            this.campoFiltroEst.TabIndex = 14;
+            // 
+            // valorLivro
+            // 
+            this.valorLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.valorLivro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.valorLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valorLivro.Location = new System.Drawing.Point(921, 162);
+            this.valorLivro.Mask = "00.00";
+            this.valorLivro.Name = "valorLivro";
+            this.valorLivro.Size = new System.Drawing.Size(78, 19);
+            this.valorLivro.TabIndex = 13;
+            // 
+            // btConEst
+            // 
+            this.btConEst.Location = new System.Drawing.Point(111, 573);
+            this.btConEst.Name = "btConEst";
+            this.btConEst.Size = new System.Drawing.Size(164, 41);
+            this.btConEst.TabIndex = 12;
+            this.btConEst.UseVisualStyleBackColor = true;
+            this.btConEst.Click += new System.EventHandler(this.btConEst_Click);
+            // 
             // filtroLivro
             // 
+            this.filtroLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filtroLivro.FormattingEnabled = true;
-            this.filtroLivro.Location = new System.Drawing.Point(106, 239);
+            this.filtroLivro.Items.AddRange(new object[] {
+            "Tipo do item",
+            "Gênero",
+            "Título",
+            "Autor",
+            "Data publicação",
+            "Editora",
+            "Valor"});
+            this.filtroLivro.Location = new System.Drawing.Point(106, 242);
             this.filtroLivro.Name = "filtroLivro";
-            this.filtroLivro.Size = new System.Drawing.Size(257, 21);
+            this.filtroLivro.Size = new System.Drawing.Size(255, 26);
             this.filtroLivro.TabIndex = 10;
             // 
             // autorLivro
             // 
-            this.autorLivro.Location = new System.Drawing.Point(106, 158);
+            this.autorLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.autorLivro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.autorLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autorLivro.Location = new System.Drawing.Point(113, 165);
             this.autorLivro.Multiline = true;
             this.autorLivro.Name = "autorLivro";
-            this.autorLivro.Size = new System.Drawing.Size(310, 27);
+            this.autorLivro.Size = new System.Drawing.Size(246, 20);
             this.autorLivro.TabIndex = 9;
             this.autorLivro.Text = "Autor...";
             // 
             // editoraLivro
             // 
-            this.editoraLivro.Location = new System.Drawing.Point(755, 158);
+            this.editoraLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.editoraLivro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.editoraLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editoraLivro.Location = new System.Drawing.Point(644, 165);
             this.editoraLivro.Multiline = true;
             this.editoraLivro.Name = "editoraLivro";
-            this.editoraLivro.Size = new System.Drawing.Size(246, 27);
+            this.editoraLivro.Size = new System.Drawing.Size(225, 19);
             this.editoraLivro.TabIndex = 8;
             this.editoraLivro.Text = "Editora...";
             // 
             // dataLivro
             // 
-            this.dataLivro.Location = new System.Drawing.Point(457, 158);
+            this.dataLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.dataLivro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataLivro.Location = new System.Drawing.Point(404, 165);
             this.dataLivro.Multiline = true;
             this.dataLivro.Name = "dataLivro";
-            this.dataLivro.Size = new System.Drawing.Size(262, 27);
+            this.dataLivro.Size = new System.Drawing.Size(192, 20);
             this.dataLivro.TabIndex = 7;
             this.dataLivro.Text = "Data...";
             // 
             // tituloLivro
             // 
-            this.tituloLivro.Location = new System.Drawing.Point(669, 79);
+            this.tituloLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.tituloLivro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tituloLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tituloLivro.Location = new System.Drawing.Point(676, 87);
             this.tituloLivro.Multiline = true;
             this.tituloLivro.Name = "tituloLivro";
-            this.tituloLivro.Size = new System.Drawing.Size(341, 25);
+            this.tituloLivro.Size = new System.Drawing.Size(332, 20);
             this.tituloLivro.TabIndex = 6;
             this.tituloLivro.Text = "Título...";
             // 
             // generoLivro
             // 
-            this.generoLivro.Location = new System.Drawing.Point(339, 79);
+            this.generoLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.generoLivro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.generoLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generoLivro.Location = new System.Drawing.Point(346, 87);
             this.generoLivro.Multiline = true;
             this.generoLivro.Name = "generoLivro";
-            this.generoLivro.Size = new System.Drawing.Size(286, 25);
+            this.generoLivro.Size = new System.Drawing.Size(278, 20);
             this.generoLivro.TabIndex = 5;
             this.generoLivro.Text = "Gênero...";
             // 
             // tipoLivro
             // 
-            this.tipoLivro.BackColor = System.Drawing.SystemColors.Window;
-            this.tipoLivro.Location = new System.Drawing.Point(106, 79);
+            this.tipoLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.tipoLivro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tipoLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoLivro.Location = new System.Drawing.Point(112, 87);
             this.tipoLivro.Multiline = true;
             this.tipoLivro.Name = "tipoLivro";
-            this.tipoLivro.Size = new System.Drawing.Size(195, 25);
-            this.tipoLivro.TabIndex = 4;
+            this.tipoLivro.Size = new System.Drawing.Size(100, 25);
+            this.tipoLivro.TabIndex = 16;
             this.tipoLivro.Text = "Tipo...";
-            this.tipoLivro.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // btPesEst
             // 
@@ -201,10 +291,11 @@
             this.btPesEst.Size = new System.Drawing.Size(151, 32);
             this.btPesEst.TabIndex = 3;
             this.btPesEst.UseVisualStyleBackColor = true;
+            this.btPesEst.Click += new System.EventHandler(this.btPesEst_Click);
             // 
             // btExcEst
             // 
-            this.btExcEst.Location = new System.Drawing.Point(765, 583);
+            this.btExcEst.Location = new System.Drawing.Point(845, 573);
             this.btExcEst.Name = "btExcEst";
             this.btExcEst.Size = new System.Drawing.Size(164, 41);
             this.btExcEst.TabIndex = 2;
@@ -212,25 +303,29 @@
             // 
             // btEdiEst
             // 
-            this.btEdiEst.Location = new System.Drawing.Point(471, 583);
+            this.btEdiEst.Location = new System.Drawing.Point(601, 573);
             this.btEdiEst.Name = "btEdiEst";
             this.btEdiEst.Size = new System.Drawing.Size(164, 41);
             this.btEdiEst.TabIndex = 1;
             this.btEdiEst.UseVisualStyleBackColor = true;
+            this.btEdiEst.Click += new System.EventHandler(this.btEdiEst_Click);
             // 
             // btIsnEst
             // 
-            this.btIsnEst.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btIsnEst.Location = new System.Drawing.Point(177, 583);
+            this.btIsnEst.Location = new System.Drawing.Point(356, 573);
             this.btIsnEst.Name = "btIsnEst";
             this.btIsnEst.Size = new System.Drawing.Size(164, 41);
             this.btIsnEst.TabIndex = 0;
             this.btIsnEst.UseVisualStyleBackColor = true;
-            this.btIsnEst.Click += new System.EventHandler(this.Button1_Click);
+            this.btIsnEst.Click += new System.EventHandler(this.btIsnEst_Click);
             // 
             // FUNCIONÁRIES
             // 
             this.FUNCIONÁRIES.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FUNCIONÁRIES.BackgroundImage")));
+            this.FUNCIONÁRIES.Controls.Add(this.dtGridFun);
+            this.FUNCIONÁRIES.Controls.Add(this.campoFiltroFun);
+            this.FUNCIONÁRIES.Controls.Add(this.filtroFun);
+            this.FUNCIONÁRIES.Controls.Add(this.btConFun);
             this.FUNCIONÁRIES.Controls.Add(this.senhaFunc);
             this.FUNCIONÁRIES.Controls.Add(this.cpfFunc);
             this.FUNCIONÁRIES.Controls.Add(this.senhaFuncConf);
@@ -247,61 +342,127 @@
             this.FUNCIONÁRIES.Text = "FUNCIONÁRIOS";
             this.FUNCIONÁRIES.UseVisualStyleBackColor = true;
             // 
+            // dtGridFun
+            // 
+            this.dtGridFun.AllowUserToAddRows = false;
+            this.dtGridFun.AllowUserToDeleteRows = false;
+            this.dtGridFun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridFun.Location = new System.Drawing.Point(128, 287);
+            this.dtGridFun.Name = "dtGridFun";
+            this.dtGridFun.RowHeadersWidth = 60;
+            this.dtGridFun.Size = new System.Drawing.Size(856, 236);
+            this.dtGridFun.TabIndex = 13;
+            this.dtGridFun.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtGridFun_CellMouseDoubleClick);
+            // 
+            // campoFiltroFun
+            // 
+            this.campoFiltroFun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoFiltroFun.Location = new System.Drawing.Point(519, 237);
+            this.campoFiltroFun.Multiline = true;
+            this.campoFiltroFun.Name = "campoFiltroFun";
+            this.campoFiltroFun.Size = new System.Drawing.Size(284, 25);
+            this.campoFiltroFun.TabIndex = 11;
+            // 
+            // filtroFun
+            // 
+            this.filtroFun.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtroFun.FormattingEnabled = true;
+            this.filtroFun.Items.AddRange(new object[] {
+            "id",
+            "Nome",
+            "CPF",
+            "Email"});
+            this.filtroFun.Location = new System.Drawing.Point(128, 236);
+            this.filtroFun.Name = "filtroFun";
+            this.filtroFun.Size = new System.Drawing.Size(254, 26);
+            this.filtroFun.TabIndex = 10;
+            // 
+            // btConFun
+            // 
+            this.btConFun.Location = new System.Drawing.Point(130, 572);
+            this.btConFun.Name = "btConFun";
+            this.btConFun.Size = new System.Drawing.Size(164, 40);
+            this.btConFun.TabIndex = 9;
+            this.btConFun.UseVisualStyleBackColor = true;
+            this.btConFun.Click += new System.EventHandler(this.btConFun_Click);
+            // 
             // senhaFunc
             // 
-            this.senhaFunc.Location = new System.Drawing.Point(563, 161);
+            this.senhaFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.senhaFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.senhaFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.senhaFunc.Location = new System.Drawing.Point(570, 162);
+            this.senhaFunc.Multiline = true;
             this.senhaFunc.Name = "senhaFunc";
-            this.senhaFunc.Size = new System.Drawing.Size(183, 20);
+            this.senhaFunc.Size = new System.Drawing.Size(171, 17);
             this.senhaFunc.TabIndex = 8;
             this.senhaFunc.UseSystemPasswordChar = true;
             this.senhaFunc.TextChanged += new System.EventHandler(this.senhaFunc_TextChanged);
             // 
             // cpfFunc
             // 
-            this.cpfFunc.Location = new System.Drawing.Point(746, 78);
+            this.cpfFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.cpfFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cpfFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpfFunc.Location = new System.Drawing.Point(753, 83);
             this.cpfFunc.Multiline = true;
             this.cpfFunc.Name = "cpfFunc";
-            this.cpfFunc.Size = new System.Drawing.Size(238, 31);
+            this.cpfFunc.Size = new System.Drawing.Size(226, 20);
             this.cpfFunc.TabIndex = 7;
             this.cpfFunc.Text = "CPF...";
+            this.cpfFunc.TextChanged += new System.EventHandler(this.cpfFunc_TextChanged);
             // 
             // senhaFuncConf
             // 
-            this.senhaFuncConf.Location = new System.Drawing.Point(780, 161);
+            this.senhaFuncConf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.senhaFuncConf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.senhaFuncConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.senhaFuncConf.Location = new System.Drawing.Point(787, 162);
+            this.senhaFuncConf.Multiline = true;
             this.senhaFuncConf.Name = "senhaFuncConf";
-            this.senhaFuncConf.Size = new System.Drawing.Size(204, 20);
+            this.senhaFuncConf.Size = new System.Drawing.Size(192, 17);
             this.senhaFuncConf.TabIndex = 6;
             this.senhaFuncConf.UseSystemPasswordChar = true;
+            this.senhaFuncConf.TextChanged += new System.EventHandler(this.senhaFuncConf_TextChanged);
             // 
             // emailFunc
             // 
-            this.emailFunc.Location = new System.Drawing.Point(126, 157);
+            this.emailFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.emailFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailFunc.Location = new System.Drawing.Point(133, 162);
             this.emailFunc.Multiline = true;
             this.emailFunc.Name = "emailFunc";
-            this.emailFunc.Size = new System.Drawing.Size(399, 28);
+            this.emailFunc.Size = new System.Drawing.Size(387, 26);
             this.emailFunc.TabIndex = 5;
             this.emailFunc.Text = "Email...";
+            this.emailFunc.TextChanged += new System.EventHandler(this.emailFunc_TextChanged);
             // 
             // nomeFunc
             // 
-            this.nomeFunc.Location = new System.Drawing.Point(126, 78);
+            this.nomeFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.nomeFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nomeFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeFunc.Location = new System.Drawing.Point(133, 83);
             this.nomeFunc.Multiline = true;
             this.nomeFunc.Name = "nomeFunc";
-            this.nomeFunc.Size = new System.Drawing.Size(581, 31);
+            this.nomeFunc.Size = new System.Drawing.Size(569, 20);
             this.nomeFunc.TabIndex = 4;
             this.nomeFunc.Text = "Nome...";
+            this.nomeFunc.TextChanged += new System.EventHandler(this.nomeFunc_TextChanged);
             // 
             // btExcFun
             // 
-            this.btExcFun.Location = new System.Drawing.Point(766, 579);
+            this.btExcFun.Location = new System.Drawing.Point(818, 571);
             this.btExcFun.Name = "btExcFun";
             this.btExcFun.Size = new System.Drawing.Size(164, 40);
             this.btExcFun.TabIndex = 3;
             this.btExcFun.UseVisualStyleBackColor = true;
+            this.btExcFun.Click += new System.EventHandler(this.btExcFun_Click);
             // 
             // btEdiFun
             // 
-            this.btEdiFun.Location = new System.Drawing.Point(473, 579);
+            this.btEdiFun.Location = new System.Drawing.Point(588, 571);
             this.btEdiFun.Name = "btEdiFun";
             this.btEdiFun.Size = new System.Drawing.Size(164, 40);
             this.btEdiFun.TabIndex = 2;
@@ -309,7 +470,7 @@
             // 
             // btInsFun
             // 
-            this.btInsFun.Location = new System.Drawing.Point(181, 579);
+            this.btInsFun.Location = new System.Drawing.Point(359, 571);
             this.btInsFun.Name = "btInsFun";
             this.btInsFun.Size = new System.Drawing.Size(164, 40);
             this.btInsFun.TabIndex = 1;
@@ -327,6 +488,10 @@
             // CLIENTES
             // 
             this.CLIENTES.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CLIENTES.BackgroundImage")));
+            this.CLIENTES.Controls.Add(this.dtGridCli);
+            this.CLIENTES.Controls.Add(this.filtroCli);
+            this.CLIENTES.Controls.Add(this.campoFiltroCli);
+            this.CLIENTES.Controls.Add(this.btConCli);
             this.CLIENTES.Controls.Add(this.telefoneCli);
             this.CLIENTES.Controls.Add(this.cpfCli);
             this.CLIENTES.Controls.Add(this.emailCli);
@@ -342,45 +507,102 @@
             this.CLIENTES.Text = "CLIENTES";
             this.CLIENTES.UseVisualStyleBackColor = true;
             // 
+            // dtGridCli
+            // 
+            this.dtGridCli.AllowUserToAddRows = false;
+            this.dtGridCli.AllowUserToDeleteRows = false;
+            this.dtGridCli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridCli.Location = new System.Drawing.Point(126, 286);
+            this.dtGridCli.Name = "dtGridCli";
+            this.dtGridCli.RowHeadersWidth = 50;
+            this.dtGridCli.Size = new System.Drawing.Size(857, 238);
+            this.dtGridCli.TabIndex = 11;
+            this.dtGridCli.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtGridCli_CellMouseDoubleClick);
+            // 
+            // filtroCli
+            // 
+            this.filtroCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtroCli.FormattingEnabled = true;
+            this.filtroCli.Items.AddRange(new object[] {
+            "id",
+            "Nome",
+            "CPF",
+            "Email",
+            "Telefone"});
+            this.filtroCli.Location = new System.Drawing.Point(126, 233);
+            this.filtroCli.Name = "filtroCli";
+            this.filtroCli.Size = new System.Drawing.Size(256, 26);
+            this.filtroCli.TabIndex = 10;
+            // 
+            // campoFiltroCli
+            // 
+            this.campoFiltroCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoFiltroCli.Location = new System.Drawing.Point(517, 236);
+            this.campoFiltroCli.Multiline = true;
+            this.campoFiltroCli.Name = "campoFiltroCli";
+            this.campoFiltroCli.Size = new System.Drawing.Size(290, 24);
+            this.campoFiltroCli.TabIndex = 9;
+            // 
+            // btConCli
+            // 
+            this.btConCli.Location = new System.Drawing.Point(126, 569);
+            this.btConCli.Name = "btConCli";
+            this.btConCli.Size = new System.Drawing.Size(164, 40);
+            this.btConCli.TabIndex = 8;
+            this.btConCli.UseVisualStyleBackColor = true;
+            this.btConCli.Click += new System.EventHandler(this.btConCli_Click);
+            // 
             // telefoneCli
             // 
-            this.telefoneCli.Location = new System.Drawing.Point(732, 159);
+            this.telefoneCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.telefoneCli.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.telefoneCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefoneCli.Location = new System.Drawing.Point(739, 161);
             this.telefoneCli.Multiline = true;
             this.telefoneCli.Name = "telefoneCli";
-            this.telefoneCli.Size = new System.Drawing.Size(100, 20);
+            this.telefoneCli.Size = new System.Drawing.Size(247, 20);
             this.telefoneCli.TabIndex = 7;
             this.telefoneCli.Text = "Telefone...";
             // 
             // cpfCli
             // 
-            this.cpfCli.Location = new System.Drawing.Point(732, 79);
+            this.cpfCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.cpfCli.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cpfCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpfCli.Location = new System.Drawing.Point(738, 84);
             this.cpfCli.Multiline = true;
             this.cpfCli.Name = "cpfCli";
-            this.cpfCli.Size = new System.Drawing.Size(100, 20);
+            this.cpfCli.Size = new System.Drawing.Size(249, 20);
             this.cpfCli.TabIndex = 6;
             this.cpfCli.Text = "CPF...";
             // 
             // emailCli
             // 
-            this.emailCli.Location = new System.Drawing.Point(126, 159);
+            this.emailCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.emailCli.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailCli.Location = new System.Drawing.Point(133, 161);
             this.emailCli.Multiline = true;
             this.emailCli.Name = "emailCli";
-            this.emailCli.Size = new System.Drawing.Size(217, 20);
+            this.emailCli.Size = new System.Drawing.Size(559, 20);
             this.emailCli.TabIndex = 5;
             this.emailCli.Text = "Email...";
             // 
             // nomeCli
             // 
-            this.nomeCli.Location = new System.Drawing.Point(126, 79);
+            this.nomeCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.nomeCli.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nomeCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeCli.Location = new System.Drawing.Point(132, 83);
             this.nomeCli.Multiline = true;
             this.nomeCli.Name = "nomeCli";
-            this.nomeCli.Size = new System.Drawing.Size(273, 31);
+            this.nomeCli.Size = new System.Drawing.Size(553, 20);
             this.nomeCli.TabIndex = 4;
             this.nomeCli.Text = "Nome...";
             // 
             // btExcCli
             // 
-            this.btExcCli.Location = new System.Drawing.Point(766, 579);
+            this.btExcCli.Location = new System.Drawing.Point(817, 569);
             this.btExcCli.Name = "btExcCli";
             this.btExcCli.Size = new System.Drawing.Size(164, 40);
             this.btExcCli.TabIndex = 3;
@@ -388,7 +610,7 @@
             // 
             // btEdiCli
             // 
-            this.btEdiCli.Location = new System.Drawing.Point(473, 579);
+            this.btEdiCli.Location = new System.Drawing.Point(585, 569);
             this.btEdiCli.Name = "btEdiCli";
             this.btEdiCli.Size = new System.Drawing.Size(164, 40);
             this.btEdiCli.TabIndex = 2;
@@ -396,7 +618,7 @@
             // 
             // btInsCli
             // 
-            this.btInsCli.Location = new System.Drawing.Point(179, 579);
+            this.btInsCli.Location = new System.Drawing.Point(356, 569);
             this.btInsCli.Name = "btInsCli";
             this.btInsCli.Size = new System.Drawing.Size(164, 40);
             this.btInsCli.TabIndex = 1;
@@ -414,13 +636,15 @@
             // VENDAS
             // 
             this.VENDAS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("VENDAS.BackgroundImage")));
-            this.VENDAS.Controls.Add(this.textBox7);
-            this.VENDAS.Controls.Add(this.textBox6);
-            this.VENDAS.Controls.Add(this.textBox5);
-            this.VENDAS.Controls.Add(this.textBox4);
-            this.VENDAS.Controls.Add(this.textBox3);
-            this.VENDAS.Controls.Add(this.textBox2);
-            this.VENDAS.Controls.Add(this.textBox1);
+            this.VENDAS.Controls.Add(this.dtGridNovaVenda);
+            this.VENDAS.Controls.Add(this.dataVen);
+            this.VENDAS.Controls.Add(this.valUniVen);
+            this.VENDAS.Controls.Add(this.qntProVen);
+            this.VENDAS.Controls.Add(this.descProVen);
+            this.VENDAS.Controls.Add(this.codProVen);
+            this.VENDAS.Controls.Add(this.valTotVen);
+            this.VENDAS.Controls.Add(this.nomeVen);
+            this.VENDAS.Controls.Add(this.cliVen);
             this.VENDAS.Controls.Add(this.btExcVen);
             this.VENDAS.Controls.Add(this.btEdiVen);
             this.VENDAS.Controls.Add(this.btInsVen);
@@ -433,56 +657,103 @@
             this.VENDAS.Text = "VENDAS";
             this.VENDAS.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // dtGridNovaVenda
             // 
-            this.textBox7.Location = new System.Drawing.Point(820, 280);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 11;
+            this.dtGridNovaVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridNovaVenda.Location = new System.Drawing.Point(127, 352);
+            this.dtGridNovaVenda.Name = "dtGridNovaVenda";
+            this.dtGridNovaVenda.Size = new System.Drawing.Size(852, 112);
+            this.dtGridNovaVenda.TabIndex = 14;
+            this.dtGridNovaVenda.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtGridNovaVenda_CellMouseDoubleClick);
             // 
-            // textBox6
+            // dataVen
             // 
-            this.textBox6.Location = new System.Drawing.Point(644, 280);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 10;
+            this.dataVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.dataVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataVen.Location = new System.Drawing.Point(699, 114);
+            this.dataVen.Mask = "00/00/0000";
+            this.dataVen.Name = "dataVen";
+            this.dataVen.Size = new System.Drawing.Size(116, 20);
+            this.dataVen.TabIndex = 13;
+            this.dataVen.ValidatingType = typeof(System.DateTime);
             // 
-            // textBox5
+            // valUniVen
             // 
-            this.textBox5.Location = new System.Drawing.Point(334, 280);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.valUniVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.valUniVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.valUniVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valUniVen.Location = new System.Drawing.Point(827, 280);
+            this.valUniVen.Multiline = true;
+            this.valUniVen.Name = "valUniVen";
+            this.valUniVen.Size = new System.Drawing.Size(146, 20);
+            this.valUniVen.TabIndex = 11;
             // 
-            // textBox4
+            // qntProVen
             // 
-            this.textBox4.Location = new System.Drawing.Point(161, 280);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.qntProVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.qntProVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.qntProVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qntProVen.Location = new System.Drawing.Point(653, 280);
+            this.qntProVen.Multiline = true;
+            this.qntProVen.Name = "qntProVen";
+            this.qntProVen.Size = new System.Drawing.Size(113, 20);
+            this.qntProVen.TabIndex = 10;
             // 
-            // textBox3
+            // descProVen
             // 
-            this.textBox3.Location = new System.Drawing.Point(0, 0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.descProVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.descProVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descProVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descProVen.Location = new System.Drawing.Point(265, 280);
+            this.descProVen.Multiline = true;
+            this.descProVen.Name = "descProVen";
+            this.descProVen.Size = new System.Drawing.Size(319, 20);
+            this.descProVen.TabIndex = 9;
             // 
-            // textBox2
+            // codProVen
             // 
-            this.textBox2.Location = new System.Drawing.Point(413, 109);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.codProVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.codProVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.codProVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codProVen.Location = new System.Drawing.Point(142, 280);
+            this.codProVen.Multiline = true;
+            this.codProVen.Name = "codProVen";
+            this.codProVen.Size = new System.Drawing.Size(68, 20);
+            this.codProVen.TabIndex = 8;
             // 
-            // textBox1
+            // valTotVen
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 109);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.valTotVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.valTotVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.valTotVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valTotVen.Location = new System.Drawing.Point(862, 115);
+            this.valTotVen.Multiline = true;
+            this.valTotVen.Name = "valTotVen";
+            this.valTotVen.Size = new System.Drawing.Size(102, 21);
+            this.valTotVen.TabIndex = 7;
+            // 
+            // nomeVen
+            // 
+            this.nomeVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.nomeVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nomeVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeVen.Location = new System.Drawing.Point(420, 114);
+            this.nomeVen.Multiline = true;
+            this.nomeVen.Name = "nomeVen";
+            this.nomeVen.Size = new System.Drawing.Size(228, 22);
+            this.nomeVen.TabIndex = 6;
+            // 
+            // cliVen
+            // 
+            this.cliVen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.cliVen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cliVen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cliVen.Location = new System.Drawing.Point(145, 114);
+            this.cliVen.Multiline = true;
+            this.cliVen.Name = "cliVen";
+            this.cliVen.Size = new System.Drawing.Size(227, 22);
+            this.cliVen.TabIndex = 5;
             // 
             // btExcVen
             // 
@@ -540,16 +811,20 @@
             this.ClientSize = new System.Drawing.Size(1120, 726);
             this.Controls.Add(this.tabControl1);
             this.Name = "Telas";
-            this.Text = "Form3";
+            this.Text = "TALES AND NOVELS";
             this.tabControl1.ResumeLayout(false);
             this.ESTOQUE.ResumeLayout(false);
             this.ESTOQUE.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridEst)).EndInit();
             this.FUNCIONÁRIES.ResumeLayout(false);
             this.FUNCIONÁRIES.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridFun)).EndInit();
             this.CLIENTES.ResumeLayout(false);
             this.CLIENTES.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCli)).EndInit();
             this.VENDAS.ResumeLayout(false);
             this.VENDAS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridNovaVenda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -580,7 +855,6 @@
         private System.Windows.Forms.Button btInsVen;
         private System.Windows.Forms.Button btFinVen;
         private System.Windows.Forms.Button btCanVen;
-        private System.Windows.Forms.TextBox tipoLivro;
         private System.Windows.Forms.ComboBox filtroLivro;
         private System.Windows.Forms.TextBox autorLivro;
         private System.Windows.Forms.TextBox editoraLivro;
@@ -597,12 +871,27 @@
         private System.Windows.Forms.TextBox cpfCli;
         private System.Windows.Forms.TextBox emailCli;
         private System.Windows.Forms.TextBox nomeCli;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox valUniVen;
+        private System.Windows.Forms.TextBox qntProVen;
+        private System.Windows.Forms.TextBox descProVen;
+        private System.Windows.Forms.TextBox codProVen;
+        private System.Windows.Forms.TextBox valTotVen;
+        private System.Windows.Forms.TextBox nomeVen;
+        private System.Windows.Forms.TextBox cliVen;
+        private System.Windows.Forms.Button btConEst;
+        private System.Windows.Forms.Button btConFun;
+        private System.Windows.Forms.Button btConCli;
+        private System.Windows.Forms.MaskedTextBox dataVen;
+        private System.Windows.Forms.MaskedTextBox valorLivro;
+        private System.Windows.Forms.TextBox campoFiltroEst;
+        private System.Windows.Forms.TextBox campoFiltroFun;
+        private System.Windows.Forms.ComboBox filtroFun;
+        private System.Windows.Forms.ComboBox filtroCli;
+        private System.Windows.Forms.TextBox campoFiltroCli;
+        private System.Windows.Forms.DataGridView dtGridEst;
+        private System.Windows.Forms.DataGridView dtGridFun;
+        private System.Windows.Forms.DataGridView dtGridCli;
+        private System.Windows.Forms.DataGridView dtGridNovaVenda;
+        private System.Windows.Forms.TextBox tipoLivro;
     }
 }
