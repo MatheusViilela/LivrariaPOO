@@ -87,7 +87,12 @@
     <Compile Include="Controllers\Banco.cs" />
     <Compile Include="Controllers\Cliente.cs" />
     <Compile Include="Controllers\Funcionario.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\Livro.cs" />
+    <Compile Include="Controllers\UserLogin.cs" />
+=======
     <Compile Include="Controllers\Estoque.cs" />
+>>>>>>> e440ad49bc997ef58280a5fbc5d938fb283e2843
     <Compile Include="Models\LivroM.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Views\TelaLogin.cs">
