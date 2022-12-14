@@ -8,10 +8,9 @@ using Livraria.Models;
 
 namespace Livraria.Controllers
 {
-    class Livro
+    class UserLogin
     {
- 
-        public void Cadastrar(LivroM data)
+        public void Logar(Usuario data)
         {
             MySqlConnection Conexao;
 
@@ -19,8 +18,8 @@ namespace Livraria.Controllers
             //criar conexão com mysql
             Conexao = new MySqlConnection(data_source);
 
-            string sql = "INSERT INTO livros (tipo,genero,livron,autor,datap,editora)" +
-                "VALUES ('" + data.Tipo + "','" + data.Genero + "','" + data.Livron + "', '" + data.Autor + "','" + data.Datap + "','" + data.Editora + "')";
+            string sql = "SELECT FROM funcionarios (email,senha)" +
+                "VALUES ('" + data.Email + "', '" + data.Senha + "')";
 
             MySqlCommand comando = new MySqlCommand(sql, Conexao);
 
@@ -30,5 +29,6 @@ namespace Livraria.Controllers
             comando.ExecuteNonQuery();
             Conexao.Close();
         }
+
     }
 }
