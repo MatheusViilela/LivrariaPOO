@@ -15,11 +15,11 @@ namespace Livraria
         public Livraria()
         {
             InitializeComponent();
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button1.BackColor = Color.Transparent;
+            //button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //button1.FlatAppearance.BorderSize = 0;
+            //button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            //button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            //button1.BackColor = Color.Transparent;
 
             btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btLogin.FlatAppearance.BorderSize = 0;
@@ -56,6 +56,7 @@ namespace Livraria
                 {
                     this.Controls.Clear();
                     Telas tl = new Telas();
+                    this.Hide();
                     tl.Show();
 
                 } else
